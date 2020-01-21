@@ -16,6 +16,13 @@
       <h3><br>Hi, my name is K. This website is to show Abqoor that he will 
         never <em>ever</em> defeat me.</h3>
     </div>
+    {% for post in posts %}
+        <div id="post">
+          <p>Published on {{ post.published_date }}</p>
+          <h2><a href="">{{ post.title }}</a></h2>
+          <p>{{ post.text|linebreaksbr }}</p>
+        </div>
+    {% endfor %}
 
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> -->
     <!-- <script src="js/scripts.js"></script> -->
